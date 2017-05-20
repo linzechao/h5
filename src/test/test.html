@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>挖渠道</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <script>
+            (function() {
+                setRootFontSize();
+
+                function setRootFontSize() {
+                    var html = document.documentElement;
+                    var fontSize = Math.min(html.clientWidth, 750) / 7.5;
+                    html.style.fontSize = fontSize + 'px';
+                }
+
+                // 测试时使用，上线可删除，非自适应(只支持手机端)
+                window.addEventListener('resize', function() {
+                    setTimeout(function() {
+                        setRootFontSize();
+                    }, 1000);
+                }, false);
+            })();
+        </script>
+
+        <style>
+            body {
+                overflow: hidden;
+                max-width: 7.5rem;
+                margin: 0 auto;
+                background-color: white;
+            }
+
+            h1 {
+                line-height: .88rem;
+                margin: 0;
+                border-bottom: .01rem solid #000;
+                font-size: .34rem;
+                font-weight: normal;
+                text-align: center;
+                color: white;
+                background-color: #f2670f;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>登录</h1>
+        </header>
+    </body>
+</html>
+

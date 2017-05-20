@@ -1,0 +1,17 @@
+@import "public/variables";
+@import "public/normalize";
+@import "public/function";
+@import "public/common";
+@import "public/components";
+
+body {
+    font-size: $size-base;
+    color: $color-strong;
+    background-color: $body-bgc;
+}
+
+a {
+    color: $color-strong;
+    text-decoration: none;
+}
+

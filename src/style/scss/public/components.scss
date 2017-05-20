@@ -1,0 +1,41 @@
+// 头部
+.header {
+    position: relative;
+    overflow: hidden;
+    height: $header-height;
+    // 默认就是渠道经理、游客
+    @include background-gradient($bgc-manager-gradual-left, $bgc-manager-gradual-right);
+
+    .menu-left {
+        float: left;
+    }
+    .menu-right {
+        float: right;
+    }
+
+    menu {
+        height: $header-height;
+        line-height: $header-height;
+
+        a {
+            display: block;
+            padding: {
+                left: .2rem;
+                right: .2rem;
+            }
+            color: white;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: $header-height;
+        font-size: .34rem;
+        text-align: center;
+        color: white;
+    }
+}
+

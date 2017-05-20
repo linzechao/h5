@@ -1,0 +1,58 @@
+@mixin icon($width, $height, $url) {
+    font-size: 0;
+    vertical-align: middle;
+
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        width: $width;
+        height: $height;
+        background: {
+            image: url($IMG-URL + $url);
+            size: 100%;
+            repeat: no-repeat;
+        }
+        content: "";
+    }
+}
+
+
+// 三角形
+@mixin triangle($direction, $width, $color) {
+    border: $width solid transparent;
+    border-#{$direction}-color: $color;
+}
+
+
+// 定位居中
+@mixin position-center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin position-y-center() {
+    position: absolute;
+    top: 50%;         
+    transform: translateY(-50%);
+}
+@mixin position-x-center() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+// 背景颜色渐变
+@mixin background-gradient($start, $end) {
+    background: -webkit-linear-gradient(left, $start, $end);
+    background: -o-linear-gradient(right, $start, $end);
+    background: -moz-linear-gradient(right, $start, $end);
+    background: linear-gradient(to right, $start, $end); 
+}
+@mixin background-vertical-gradient($start, $end) {
+    background: -webkit-linear-gradient($start, $end);
+    background: -o-linear-gradient($start, $end);
+    background: -moz-linear-gradient($start, $end);
+    background: linear-gradient($start, $end); 
+}

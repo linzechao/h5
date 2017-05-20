@@ -1,0 +1,45 @@
+// MARGIN、PADDING
+$value: (0 0) (.1rem 1) (.2rem 2) (.4rem 4);
+$direction: (top t) (right r) (bottom b) (left t);
+
+@each $val, $vName in $value {
+    .m-#{$vName} {margin: #{$val}!important;}
+    .p-#{$vName} {padding: #{$val}rem!important;}
+
+    @each $direc, $dName in $direction {
+        .m-#{$dName}-#{$val} {margin-#{$direc}: #{$val}!important;}
+        .p-#{$dName}-#{$val} {padding-#{$direc}: #{$val}!important;}
+    }
+}
+
+
+// Display
+.hide {display: none!important;}
+.show {display: block!important;}
+
+
+// Float
+.pull-right {float: right;}
+.pull-left {float: left;}
+
+
+// Block
+.block-max {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+// Text
+$aText: left center right;
+@each $name in $aText {
+    .text-#{$name} {
+        text-align: #{$name}!important;
+    }
+}
+
+
+// Icon
+.icon-arrow-down {@include icon(.22rem, .13rem, "arrow-down.png");}
+

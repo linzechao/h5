@@ -1,0 +1,66 @@
+@mixin mtb0 {
+    margin: {
+        top: 0;
+        bottom: 0;
+    }
+}
+
+@mixin font {
+    font: {
+        weight: normal;
+        size: inherit;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+// 标题
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include mtb0;
+    @include font;
+}
+
+// 输入框
+button,
+textarea,
+input[type="text"],
+input[type="password"] {
+    border: 0;
+    background-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+// 列表
+menu,
+ul,
+ol {
+    list-style: none;
+    @include mtb0;
+    padding-left: 0;
+}
+
+// 加粗
+strong,
+small,
+b {
+    @include font;
+}
+
+// 斜体
+address,
+cite,
+em,
+i {
+    font-style: normal;
+}
+
