@@ -6,6 +6,14 @@
     // 默认就是渠道经理、游客
     @include background-gradient($bgc-manager-gradual-left, $bgc-manager-gradual-right);
 
+    &.header-light {
+        background: white;
+
+        h1 {
+            color: $color-common;
+        }
+    }
+
     .menu-left {
         float: left;
     }
