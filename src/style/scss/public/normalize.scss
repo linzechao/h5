@@ -34,6 +34,8 @@ input[type="text"],
 input[type="password"] {
     border: 0;
     background-color: transparent;
+    // 新版iOS默认圆角
+    border-radius: 0;
 
     &:focus {
         outline: 0;
@@ -62,5 +64,14 @@ cite,
 em,
 i {
     font-style: normal;
+}
+
+// 链接
+a {
+    &:active {
+        background-color: $link-active;
+        // 谷歌默认的高亮遮罩层
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 

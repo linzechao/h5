@@ -9,29 +9,32 @@
     &.header-light {
         background: white;
 
-        h1 {
+        h1,
+        a {
             color: $color-common;
         }
     }
 
-    .menu-left {
-        float: left;
-    }
-    .menu-right {
-        float: right;
-    }
-
     menu {
+        position: absolute;
+        top: 0;
         height: $header-height;
         line-height: $header-height;
 
         a {
             display: block;
             padding: {
-                left: .2rem;
-                right: .2rem;
+                left: .3rem;
+                right: .3rem;
             }
             color: white;
+        }
+
+        &.menu-left {
+            left: 0;
+        }
+        &.menu-right {
+            right: 0;
         }
     }
 
@@ -45,5 +48,30 @@
         text-align: center;
         color: white;
     }
+
+    // 返回按钮
+    .btn-back {
+        @include icon(.21rem, .41rem, "arrow-left.png");
+    }
+
+    .btn-home {
+        width: .5rem;
+        line-height: normal;
+        text-align: center;
+
+        @include icon(.42rem, .42rem, "home.png");
+        &:before {
+            margin: {
+                top: .04rem;
+                bottom: .02rem;
+            }
+        }
+
+        &:after {
+            font-size: .2rem;
+            content: "首页";
+        }
+    }
 }
+
 
