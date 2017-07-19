@@ -125,9 +125,9 @@ module.exports = {
         alias: {
             src: SRC,
             view: 'src/view',
-            components: 'src/components',
             js: 'src/script/js',
             scss: 'src/style/scss',
+            components: 'src/components',
             images: 'src/assets/images',
             fonts: 'src/assets/fonts'
         }

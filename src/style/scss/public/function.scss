@@ -1,10 +1,6 @@
 @mixin icon($width, $height, $url) {
-    font-size: 0;
-    vertical-align: middle;
-
     &:before {
         display: inline-block;
-        vertical-align: middle;
         width: $width;
         height: $height;
         background: {
