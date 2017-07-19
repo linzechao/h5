@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "webpack-dev-server --config webpack.config.js --progress --color",
-    "webpack": "webpack --config webpack.config.js --watch --progress --color"
+    "webpack": "webpack --config webpack.config.js --watch --progress --color",
+    "build": "webpack -p"
   },
   "author": "MR.Super",
   "license": "ISC",

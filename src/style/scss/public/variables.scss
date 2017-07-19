@@ -16,6 +16,8 @@ $size-tiny                 : .22rem;
 $color-strong              : #333;
 $color-common              : #666;
 $color-sub                 : #999;
+// 点击链接
+$link-active               : rgba(0,0,0,.1);
 
 
 // Vendor(厂商)
@@ -41,6 +43,6 @@ $header-height             : .88rem;
 
 
 // 图片路径
-$IMG-URL: '/src/assets/images/icon/';
+$IMG-URL: './../../../assets/images/icon/';
 
 
